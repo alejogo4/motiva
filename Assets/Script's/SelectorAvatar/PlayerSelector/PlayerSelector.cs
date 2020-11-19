@@ -101,10 +101,7 @@ public class PlayerSelector : MonoBehaviour
 
     }
 
-    public void GetNameUser()
-    {
-        
-    }
+    
 
     
 

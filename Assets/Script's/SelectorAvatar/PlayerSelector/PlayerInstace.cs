@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerInstace : MonoBehaviour
 {
-    
-    
-
     private void Update()
     {
         if (PlayerSelector.instanciado == true)
