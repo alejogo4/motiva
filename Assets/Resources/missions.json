@@ -1,0 +1,12 @@
+{
+	"missions": [
+		"Bienestar Del Aprendiz",
+		"Sennova",
+		"Casos"
+	],
+	"messages": [
+		"Dirígete hacia bienestar del aprendiz y escanea el código.",
+		"Conoce Sennova y escanea el código.",
+		"Casos mision"
+	]
+}
