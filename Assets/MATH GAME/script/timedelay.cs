@@ -13,7 +13,7 @@ public class timedelay : MonoBehaviour {
         counter += Time.deltaTime;
         if (counter > 3)
             {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("game_1");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainRA");
             }
         }
 
