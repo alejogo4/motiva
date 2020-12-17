@@ -6,11 +6,13 @@ public class Check : MonoBehaviour
 {
     private int firstTime, Net = 0;
 
-    public GameObject panelFristTime, panelTieneRed, panelCompleto;
+    public GameObject panelFristTime, panelTieneRed, panelEncuesta ,panelCompleto, PanelComoJugar;
 
     void Start()
     {
        panelTieneRed.SetActive(false);
+        PanelComoJugar.SetActive(false);
+       panelEncuesta.SetActive(true);
 
         firstTime = PlayerPrefs.GetInt("valor", firstTime);
         ConfFirsTime();
@@ -35,6 +37,7 @@ public class Check : MonoBehaviour
         if (firstTime == 1)
         {
             panelFristTime.SetActive(false);
+            panelEncuesta.SetActive(false);
         }
     }
 
@@ -45,10 +48,21 @@ public class Check : MonoBehaviour
             firstTime = 1;
             PlayerPrefs.SetInt("valor", firstTime);
             panelFristTime.SetActive(false);
-            panelTieneRed.SetActive(true);
+            panelEncuesta.SetActive(false);
+            //panelTieneRed.SetActive(true);
         }       
               
     }
+    public void ComoJugar()
+    {
+        PanelComoJugar.SetActive(true);
+    }
+
+    public void QuitComoJugar()
+    {
+        PanelComoJugar.SetActive(false);
+    }
+
 
     public void FirstTimeN()
     {
@@ -64,6 +78,7 @@ public class Check : MonoBehaviour
             //PlayerPrefs.SetInt("valor", firstTime);
             panelTieneRed.SetActive(false);
             panelCompleto.SetActive(false);
+            panelEncuesta.SetActive(true);
         }
 
     }
@@ -73,6 +88,7 @@ public class Check : MonoBehaviour
         //PlayerPrefs.SetInt("valor", firstTime);
         panelTieneRed.SetActive(false);
         panelCompleto.SetActive(false);
+        panelEncuesta.SetActive(false);
 
     }
 }
